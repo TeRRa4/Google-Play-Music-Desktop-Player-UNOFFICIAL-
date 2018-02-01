@@ -54,14 +54,7 @@ const setPresence = () => {
       instance: false,
       largeImageKey: 'playing',
       largeImageText: 'Google Play Music',
-      partySize: queueTrackIndex,
-      partyMax: queueLength,
     };
-
-    if (queueTrackIndex > queueLength || !queueTrackIndex) {
-      delete presence.partySize;
-      delete presence.partyMax;
-    }
 
     if (!isPlaying) {
       presence.smallImageKey = 'pause';
